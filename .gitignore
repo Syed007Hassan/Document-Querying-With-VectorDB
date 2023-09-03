@@ -1,0 +1,52 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.pyc
+*$py.class
+
+# Environment variables
+.env
+
+# Local development server
+.env
+env/
+
+# Logs
+*.log
+
+# Virtual environment
+venv/
+ENV/
+
+# IDE files
+.idea/
+.vscode/
+
+# Dependency directories
+lib/
+libs/
+dist/
+build/
+
+# Compiled Python files
+*.pyc
+
+# Compiled C extension
+*.so
+
+# Cached files
+*.cache
+*.swp
+
+# Database files
+*.db
+*.sqlite
+
+# Testing files
+.coverage
+.tox/
+
+# Miscellaneous
+.DS_Store
+*.bak
+*.tmp
+*.temp
