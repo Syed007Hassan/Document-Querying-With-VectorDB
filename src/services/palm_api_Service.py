@@ -87,10 +87,10 @@ def get_solutions(pdf_content, query):
             pdf_content += pdf_reader.pages[page].extract_text()
 
         # pdf_content = pdf_reader.pages[0].extract_text()
-        pdf_content = pdf_content[:6200]
+        pdf_content = pdf_content[:6000]
 
         # Set up the DB
-        db = create_chroma_db([pdf_content], "googlecardb")
+        db = create_chroma_db([pdf_content], "exampleDBCollection")
 
         temperature = 0.65
 
