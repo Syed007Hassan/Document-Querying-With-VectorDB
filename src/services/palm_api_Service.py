@@ -12,13 +12,6 @@ import chromadb
 from chromadb.api.types import Documents, Embeddings
 palm.configure(api_key='AIzaSyCiEx4VJELwnAjCmGfgZ4ovTKz50pIRJWQ')
 
-promptPrefix = """
-You are a chatbot integrated with an ERP system. You are here to help the user to reorder items.
-Further you can help the user to get the vendor details for a particular item.
-Also the user can create invoices by selecting either the company or individual. Then selecting the item and quantity.
-Afterwards the user can create and download/print the invoice. 
-
-"""
 
 models = [m for m in palm.list_models(
 ) if 'embedText' in m.supported_generation_methods]
@@ -110,27 +103,3 @@ def get_solutions(pdf_content, query):
     except Exception as e:
         print("Error generating response: " + str(e))
         return str(e)
-
-
-def palm_create_response(prompt1: str):
-
-    try:
-        response = palm.generate_text(
-            prompt=prompt1, max_output_tokens=800, temperature=0.7)
-        print(response.result)
-        return response.result
-    except Exception as e:
-        print("Error generating response: " + str(e))
-        return "I am have issue with that. Is there any thing i can do..."
-
-
-def palm_chat_response(prompt1: str):
-
-    try:
-        response = palm.generate_text(
-            prompt=promptPrefix + prompt1, max_output_tokens=800, temperature=0.7)
-        print(response.result)
-        return response.result
-    except Exception as e:
-        print("Error generating response: " + str(e))
-        return "I am have issue with that. Is there any thing i can do..."
