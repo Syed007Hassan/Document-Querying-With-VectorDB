@@ -1,13 +1,9 @@
-from config import baseUrl
-import os
 from flask import Flask, jsonify
 import google.generativeai as palm
-import requests
 import json
 import base64
 import PyPDF2
 import io
-import pandas as pd
 import chromadb
 from chromadb.api.types import Documents, Embeddings
 palm.configure(api_key='YOUR_API_KEY')
