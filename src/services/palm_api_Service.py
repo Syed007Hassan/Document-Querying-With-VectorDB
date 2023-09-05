@@ -10,7 +10,7 @@ import io
 import pandas as pd
 import chromadb
 from chromadb.api.types import Documents, Embeddings
-palm.configure(api_key='AIzaSyCiEx4VJELwnAjCmGfgZ4ovTKz50pIRJWQ')
+palm.configure(api_key='YOUR_API_KEY')
 
 
 models = [m for m in palm.list_models(
