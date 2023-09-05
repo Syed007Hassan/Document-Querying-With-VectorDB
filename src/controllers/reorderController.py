@@ -1,4 +1,3 @@
-
 from flask import jsonify, request
 from src.services.palm_api_Service import get_solutions
 
