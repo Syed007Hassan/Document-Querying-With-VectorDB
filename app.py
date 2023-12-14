@@ -7,6 +7,7 @@ from src.routes.reorderRoutes import reorderBlueprint
 
 
 def create_app():
+    
     # Allow CORS for all origins
     app = Flask(__name__)
     CORS(app, resources={r"/*": {"origins": "*"}})
